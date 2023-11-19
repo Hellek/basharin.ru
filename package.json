@@ -2,7 +2,11 @@
   "name": "basharin-ru",
   "version": "0.1.0",
   "private": true,
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hellek/basharin.ru"
+  },
+  "license": "UNLICENSED",
   "scripts": {
     "serve": "yarn && webpack serve --mode=development",
     "upgrade-to-latest": "yarn upgrade-interactive --latest",
@@ -24,8 +28,8 @@
     ]
   },
   "engines": {
-    "node": "16",
-    "npm": "8"
+    "node": "18",
+    "npm": "9"
   },
   "dependencies": {
     "antd": "5.3.3",
