@@ -47,8 +47,12 @@
     @apply font-semibold;
   }
 
-  a:hover {
-    @apply underline;
+  a {
+    @apply text-inherit;
+
+    &:hover {
+      @apply no-underline;
+    }
   }
 }
 
