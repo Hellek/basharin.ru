@@ -18,6 +18,19 @@ const AppTypeColor = new Map([
 
 const apps = [
   {
+    type: AppType.Application,
+    name: 'Nodejs app: search file duplicates',
+    repo: 'https://github.com/Hellek/pet-search-image-duplicates',
+    desc: 'Recursively search duplicates (by size and content) at specific folder. Put duplicates to separate in memory buckets',
+  },
+  {
+    type: AppType.Application,
+    name: 'WebGL graph',
+    url: 'https://threejs-graph-builder.basharin.ru',
+    repo: 'https://github.com/Hellek/threejs-graph-builder',
+    desc: 'Prototype of tmap FE graph. Drawn with WebGL (three.js). Accepts data at tmap format (https://tmap.gdb.tools/index.html#ex-drugbank)',
+  },
+  {
     type: AppType.PesonalSite,
     name: 'Wedding',
     url: 'https://wedding.basharin.ru',

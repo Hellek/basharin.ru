@@ -22,6 +22,10 @@ export const HomePage = () => (
         <span> (EN/RU)</span>
       </div>
 
+      <div className="mt-2">
+        <a href="https://www.linkedin.com/in/roman-basharin" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+
       <Divider className="bg-gray-500" />
 
       <MyApps />
