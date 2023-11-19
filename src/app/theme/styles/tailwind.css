@@ -30,6 +30,9 @@
 
   body {
     @apply m-0 text-black;
+
+    /* Preventing the Layout Shift Caused by Scrollbars */
+    padding-left: calc(100vw - 100%);
   }
 
   html,
@@ -47,12 +50,16 @@
   }
 
   a {
-    @apply text-inherit;
+    @apply text-inherit hover:text-blue-400;
 
     &:hover {
       @apply no-underline;
     }
   }
+}
+
+a.active {
+  @apply text-blue-600;
 }
 
 /* @layer components {} */
