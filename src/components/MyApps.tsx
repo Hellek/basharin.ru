@@ -81,6 +81,8 @@ export const MyApps = () => (
           <a
             href={app.url}
             className="mx-1"
+            target="_blank"
+            rel="noreferrer"
           >
             {app.name}
           </a>

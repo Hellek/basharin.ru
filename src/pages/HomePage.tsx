@@ -18,7 +18,7 @@ export const HomePage = () => (
 
       <div>
         <span>CV on </span>
-        <a href="https://career.habr.com/rbasharin" target="_blank" rel="noreferrer">Career Habr</a>
+        <a href="https://career.habr.com/rbasharin" target="_blank" rel="noreferrer">Habr Career</a>
         <span> (EN/RU)</span>
       </div>
 
