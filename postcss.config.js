@@ -1,5 +1,8 @@
 module.exports = {
   plugins: [
+    'postcss-calc',
+    'postcss-for',
+    'postcss-simple-vars',
     'postcss-import',
     'tailwindcss/nesting',
     'tailwindcss',
