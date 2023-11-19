@@ -16,7 +16,7 @@ export const HomePage = () => (
 
       <Divider className="bg-gray-500" />
 
-      <div className="mb-5">
+      <div>
         <span>CV on </span>
         <a href="https://career.habr.com/rbasharin" target="_blank" rel="noreferrer">Career Habr</a>
         <span> (EN/RU)</span>
