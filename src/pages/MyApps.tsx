@@ -1,6 +1,7 @@
 import { Tag, Tooltip } from 'antd'
 
 import Card from '@components/Card'
+import { OctocatIcon } from '@components/Icons'
 
 type Technology = 'react' | 'nextjs' | 'eslint' | 'husky'
   | 'lint-staged' | 'tailwindcss' | 'postcss'
@@ -136,12 +137,8 @@ export const MyApps = () => (
           )}
 
           {app.repo && (
-            <a href={app.repo} target="_blank" rel="noreferrer">
-              <img
-                src="/github-mark.svg"
-                alt="Github icon"
-                className="w-5"
-              />
+            <a href={app.repo} target="_blank" rel="noreferrer" className="flex">
+              <OctocatIcon className="fill-black dark:fill-white" />
             </a>
           )}
         </div>

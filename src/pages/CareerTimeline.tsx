@@ -71,17 +71,15 @@ const timeline = [
 ]
 
 export const CareerTimeline = () => (
-  <div className="flex flex-col gap-10">
+  <div className="flex flex-col gap-7">
     {timeline.map(t => (
-      <Card key={t.atYear} className="ml-16 relative">
-        <div className="absolute -ml-20 -mt-4 font-semibold text-lg">{t.atYear}</div>
-
-        <div className="flex flex-col">
+      <div key={t.atYear} className="flex gap-5">
+        <Card className="flex flex-col">
           <div className="mb-2 text-xl">{t.roles.join(', ')}</div>
 
           <div className="mb-3">{t.description}</div>
 
-          <div className="flex flex-wrap gap-1">{t.tags.map(tag => (
+          <div className="flex flex-wrap gap-2">{t.tags.map(tag => (
             <div
               key={tag}
               className="text-sm border border-slate-500 px-1.5 rounded-md whitespace-nowrap"
@@ -90,8 +88,10 @@ export const CareerTimeline = () => (
             </div>
           ))}
           </div>
-        </div>
-      </Card>
+        </Card>
+
+        <div className="font-semibold text-lg">{t.atYear}</div>
+      </div>
     ))}
   </div>
 )

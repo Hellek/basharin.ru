@@ -1,13 +1,13 @@
 import { NavLink } from 'react-router-dom'
 
 import Card from '@components/Card'
-import { LangSwitcher } from '@components/LangSwitcher'
+// import { LangSwitcher } from '@components/LangSwitcher'
 import { ThemeSwitcher } from '@components/ThemeSwitcher'
 
 import { publicRoutes } from '@app/routes'
 
 const Header = () => (
-  <Card className="flex justify-between pb-4 mb-5 border-b border-gray-500">
+  <Card className="flex justify-between pb-4 mb-5">
     <div>
       <div className="text-2xl mb-2">Hej! My name is Roman, nice to see you here!</div>
 
@@ -20,7 +20,7 @@ const Header = () => (
     </div>
 
     <div className="flex gap-2">
-      <LangSwitcher />
+      {/* <LangSwitcher /> */}
       <ThemeSwitcher />
     </div>
   </Card>
