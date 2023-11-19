@@ -1,5 +1,7 @@
 import { Tag, Tooltip } from 'antd'
 
+import Card from '@components/Card'
+
 type Technology = 'react' | 'nextjs' | 'eslint' | 'husky'
   | 'lint-staged' | 'tailwindcss' | 'postcss'
   | 'typescript' | 'emailjs' | 'vuejs@2' | 'nuxtjs'
@@ -102,9 +104,9 @@ const apps: Project[] = [
 ]
 
 export const MyApps = () => (
-  <div className="flex flex-col gap-10">
+  <div className="flex flex-col gap-7">
     {apps.map(app => (
-      <div key={app.name} className="flex flex-col gap-1.5">
+      <Card key={app.name} className="flex flex-col gap-1.5">
         <div className="flex items-center gap-2.5">
           <Tag color={AppTypeColor.get(app.type)} className="mr-0">{app.type}</Tag>
 
@@ -142,7 +144,7 @@ export const MyApps = () => (
             <div>{app.technologies.join(', ')}</div>
           </div>
         )}
-      </div>
+      </Card>
     ))}
   </div>
 )

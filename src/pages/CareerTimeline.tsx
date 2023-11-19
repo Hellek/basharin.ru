@@ -1,3 +1,5 @@
+import Card from '@components/Card'
+
 const timeline = [
   {
     atYear: 2023,
@@ -71,8 +73,8 @@ const timeline = [
 export const CareerTimeline = () => (
   <div className="flex flex-col gap-10">
     {timeline.map(t => (
-      <div key={t.atYear} className="px-4 py-3 rounded-lg ml-16 relative bg-gray-300">
-        <div className="absolute -ml-20 -mt-0.5 font-semibold text-lg">{t.atYear}</div>
+      <Card key={t.atYear} className="ml-16 relative">
+        <div className="absolute -ml-20 -mt-4 font-semibold text-lg">{t.atYear}</div>
 
         <div className="flex flex-col">
           <div className="mb-2 text-xl">{t.roles.join(', ')}</div>
@@ -82,14 +84,14 @@ export const CareerTimeline = () => (
           <div className="flex flex-wrap gap-1">{t.tags.map(tag => (
             <div
               key={tag}
-              className="text-sm bg-slate-400 px-1.5 rounded-md whitespace-nowrap"
+              className="text-sm border border-slate-500 px-1.5 rounded-md whitespace-nowrap"
             >
               {tag}
             </div>
           ))}
           </div>
         </div>
-      </div>
+      </Card>
     ))}
   </div>
 )
