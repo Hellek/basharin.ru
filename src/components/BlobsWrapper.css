@@ -1,0 +1,30 @@
+/* stylelint-disable function-whitespace-after, keyframes-name-pattern, function-no-unknown, selector-class-pattern, at-rule-no-unknown */
+.blobs-wrapper {
+  /* https://codepen.io/cassie-codes/pen/zWJxXj?editors=1100 */
+  .blobs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  @for $iteration from 1 to 18 {
+    $a: calc($iteration * 90);
+    $anegative: calc($iteration * -90);
+    $b: calc($iteration * 90 + 360);
+    $bnegative: calc(calc($iteration * 90 + 360) * -1);
+
+    .blob:nth-child($iteration) {
+      animation: move$(iteration) 20s infinite linear;
+    }
+
+    @keyframes move$(iteration) {
+      from {
+        transform: rotate($(a)deg) translate(200px, 0.1px) rotate($(anegative)deg);
+      }
+
+      to {
+        transform: rotate($(b)deg) translate(200px, 0.1px) rotate($(bnegative)deg);
+      }
+    }
+  }
+}
