@@ -4,7 +4,8 @@ import Card from '@components/Card'
 
 type Technology = 'react' | 'nextjs' | 'eslint' | 'husky'
   | 'lint-staged' | 'tailwindcss' | 'postcss'
-  | 'typescript' | 'emailjs' | 'vuejs@2' | 'nuxtjs'
+  | 'typescript' | 'emailjs' | 'vuejs@2' | 'nuxtjs' | 'svg'
+  | 'css animations' | 'stylelint' | 'webpack'
 
 enum AppType {
   Application = 'Application',
@@ -33,6 +34,14 @@ type Project = {
 }
 
 const apps: Project[] = [
+  {
+    type: AppType.CommercialPage,
+    name: 'My pesonal site',
+    desc: 'Few pages with info about my career and personal projects',
+    url: 'https://basharin.ru',
+    repo: 'https://github.com/Hellek/basharin.ru',
+    technologies: ['react', 'eslint', 'stylelint', 'webpack', 'husky', 'lint-staged', 'tailwindcss', 'postcss', 'typescript', 'svg', 'css animations'],
+  },
   {
     type: AppType.Application,
     name: 'Nodejs app: search file duplicates',
@@ -93,6 +102,7 @@ const apps: Project[] = [
     desc: 'Made with nuxt.js',
     url: 'https://hellek.ru',
     repo: 'https://github.com/Hellek/hellek.ru',
+    closed: true,
     technologies: ['vuejs@2', 'nuxtjs'],
   },
   {
@@ -100,6 +110,7 @@ const apps: Project[] = [
     name: 'Tinkoff investing hotkeys',
     desc: 'At 2020 Tinkoff investing terminal has no hotkeys for buy/sell operations',
     repo: 'https://github.com/Hellek/tinkoff-invest-hotkeys',
+    closed: true,
   },
 ]
 
