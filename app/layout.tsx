@@ -2,6 +2,7 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
+import { ThemeProvider } from 'next-themes'
 
 import { BlobsWrapper } from '@/components/BlobsWrapper'
 import Header from '@/components/Header'
@@ -19,13 +20,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className="dark">
+    <html lang="ru" suppressHydrationWarning>
       <body className={'flex ' + fontGoogle.className}>
         <BlobsWrapper className="grow">
           <div className="flex justify-center">
             <div className="w-full max-w-7xl p-6">
-              <Header />
-              {children}
+              <ThemeProvider attribute="class">
+                <Header />
+                {children}
+              </ThemeProvider>
             </div>
           </div>
         </BlobsWrapper>

@@ -1,9 +1,14 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import Card from './Card'
+
+const ThemeSwitcher = dynamic(() => import('./ThemeSwitcher'), {
+  ssr: false, // This ensures the component is not SSR'd
+})
 
 const navLinks = {
   HomePage: {
@@ -60,6 +65,11 @@ const Header = () => {
           <a href="https://career.habr.com/rbasharin" target="_blank" rel="noreferrer">habr career</a>
           <a href="https://www.linkedin.com/in/roman-basharin" target="_blank" rel="noreferrer">linkedIn</a>
         </div>
+      </div>
+
+      <div className="flex gap-2">
+        {/* <LangSwitcher /> */}
+        <ThemeSwitcher />
       </div>
     </Card>
   )}
